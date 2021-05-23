@@ -6,7 +6,10 @@ const collect_ratings = () => {
   elements.forEach(element => {
     rating = parseInt(element.id.replace('star', ''));
     ratings.count += parseInt(element.value);
-    rating.sum += parseInt(element.value) * rating;
+    ratings.sum += parseInt(element.value) * rating;
   }
   )
+  if ratings.count !== 0 {
+    average = ratings.sum / ratings.count
+  }
 }
