@@ -7,9 +7,8 @@ const collect_ratings = () => {
     rating = parseInt(element.id.replace('star', ''));
     ratings.count += parseInt(element.value);
     ratings.sum += parseInt(element.value) * rating;
-  }
-  )
+  });
   if ratings.count !== 0 {
-    average = ratings.sum / ratings.count
+    ratings.average = ratings.sum / ratings.count;
   }
 }
